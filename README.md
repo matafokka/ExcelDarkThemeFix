@@ -8,7 +8,7 @@ When the custom dark theme is used, sheets, graphics items, charts and everythin
 
 As a result, everything is displayed in a wrong color. Moreover, Excel would save and print the document in the wrong colors too.
 
-This script aims to fix this issue by manually setting colors to normal.
+This Add-In aims to fix this issue by manually setting colors to normal.
 
 # What is fixed?
 
@@ -21,9 +21,9 @@ This script aims to fix this issue by manually setting colors to normal.
 # What is not fixed?
 
 1. SmartArt. It's not possible to fix it.
-1. Charts' text color. *Automatic color is close to the needed one, and implementating the fix is hard and mostly useless.*
+1. Charts' text color. *Automatic color is close to the needed one, and implementing the fix is hard and mostly useless.*
 1. Dark background in a cell when editing text. *Use the formula thingy right above the sheet to see what you type. It's possible to fix, but it will remove the ability to undo things.*
-1. Auto color replacement, like when you set the automatic color, it would apply the right one instead. *Hard to fix, will remove the ability to undo things. The fix button also won't be added because of this behavior. If you **really** need to fix everything, save, close and open the workbook again. *
+1. Auto color replacement, like when you set the automatic color, it would apply the right one instead. *Hard to fix, will remove the ability to undo things. The fix button also won't be added because of this behavior. If you **really** need to fix everything, save, close and open the workbook again.*
 1. You name it, I'm not an Excel expert :D
 
 If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
