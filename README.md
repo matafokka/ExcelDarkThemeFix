@@ -3,32 +3,87 @@ Fixes Microsoft Excel appearance when custom Windows theme is used
 
 ![preview](https://user-images.githubusercontent.com/34414488/90824725-8828aa80-e340-11ea-82db-ef3a5a36ed0e.png)
 
-# What is it? What it does?
-When the custom dark theme is used, sheets, graphics items, charts and everything that have "Automatic color" are dark. This happens because Excel picks system colors *(instead of using predefined ones)* for "automatic" color, and theme alters it.
+When the custom dark Windows theme is used, sheets, graphics items, charts and everything that have an "Automatic color" are displayed, exported and printed in the wrong colors.
 
-As a result, everything is displayed in a wrong color. Moreover, Excel would save and print the document in the wrong colors too.
+This happens because Excel picks system colors *(instead of using predefined ones)* for the "Automatic color" which are altered by the themes.
 
-This Add-In aims to fix this issue by manually setting colors to normal.
+This Add-In aims to fix this issue by setting colors to normal.
 
 # What is fixed?
 
-1. Background
-1. Cell colors
+1. Sheets
+1. Cells
 1. Shapes
-1. Charts
+1. Charts - except slightly different font colors
 1. Styles
+1. Fixing multiple files in one click
+
+# What has workaround?
+
+1. Charts' font colors - there's an option to set it to black.
+1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
 
 # What is not fixed?
 
-1. SmartArt. It's not possible to fix it.
-1. Charts' text color. *Automatic color is close to the needed one, and implementing the fix is hard and mostly useless.*
-1. Dark background in a cell when editing text. *Use the formula thingy right above the sheet to see what you type. It's possible to fix, but it will remove the ability to undo things.*
-1. Auto color replacement, like when you set the automatic color, it would apply the right one instead. *Hard to fix, will remove the ability to undo things. The fix button also won't be added because of this behavior. If you **really** need to fix everything, save, close and open the workbook again.*
+1. SmartArt - as far as I've tried, unfixable.
+1. Automatic color replacement.
+1. Table styles - hard to fix and default styles don't need it.
+1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so scipt just will replace it.
 1. You name it, I'm not an Excel expert :D
 
 If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
 
-# How to install?
-1. Download `ExcelDarkThemeFix.xlam` and `whitebg.png`.
-1. Google "excel install add-in" and follow any of the available guides.
-1. When you'll move the files, move both files you've downloaded.
+# Compatibility list
+
+Fully compatible with Microsoft Office 2019. Should work in Office 2016 and 360.
+
+If you can test it in versions other than Office 2019, please, let me know, I'll update this list.
+
+# Installation
+
+1. Download `ExcelDarkThemeFix.xlam` and `whitebg.png` files.
+1. Navigate to `%AppData%\Microsoft\AddIns` and put the downloaded files here.
+1. Enable macros:
+   1. Open Excel.
+   1. Navigate to "Options".
+   1. On the left side of the window click "Customize Ribbon".
+   1. On the right side of the window check "Developer" and "Add-Ins" boxes.
+   1. Click "Ok" and restart Excel.
+1. Enable this Add-In:
+   1. Open "Developer" tab.
+   1. Click on "Excel Add-Ins".
+   1. Check the "ExcelDarkThemeFix" box.
+   1. Click "Ok" and restart Excel.
+
+# Configuration
+
+1. Open Excel.
+1. Open "Developer" tab.
+1. Click on "Visual Basic"
+1. On the left pane, navigate to element displayed on the following screenshot and double-click on it:
+
+![Open "ExcelDarkThemeFixModule"](https://user-images.githubusercontent.com/34414488/90905218-8ad6de80-e3d8-11ea-8369-9ebb11ffafca.png)
+
+Follow the described instructions. Read everything **carefully**!
+
+After you've done playing, press `Ctrl+S` and restart Excel.
+
+# FAQ
+
+### Do I need it if I use light theme?
+
+Yes, if your theme uses colors different from white for window and black for text.
+
+### Does it work with a high contrast themes
+No.
+
+### Can you make a dark theme for Excel?
+No. There's too much things to track. It's almost (if not entirely) impossible.
+
+### How can I help?
+
+If you're regular user, you can test this Add-In with different kinds of workbooks and report found issues. You could also install an older version of Microsoft Office and check if this Add-In is compatibe with it.
+
+You can also spread the word about this Add-In (especially in non-English speaking parts of the Internet), so other people could have a less of a headache.
+
+If you're developer, you can add some useful features or fix things as described above. Start by thoroughly reading the code to understand what it does. Then do the coding. After you're done, create a pull request with your code.
