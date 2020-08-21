@@ -23,6 +23,8 @@ This Add-In aims to fix this issue by setting colors to normal.
 1. Charts' font colors - there's an option to set it to black.
 1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
 
+Enabling these options is described under the "Configuration" section.
+
 # What is not fixed?
 
 1. SmartArt - as far as I've tried, unfixable.
@@ -57,6 +59,8 @@ If you can test it in versions other than Office 2019, please, let me know, I'll
 
 # Configuration
 
+This Add-In provides some cool but unsafe options that you can enable. In order to do this:
+
 1. Open Excel.
 1. Open "Developer" tab.
 1. Click on "Visual Basic"
@@ -66,7 +70,7 @@ If you can test it in versions other than Office 2019, please, let me know, I'll
 
 Follow the described instructions. Read everything **carefully**!
 
-After you've done playing, press `Ctrl+S` and restart Excel.
+After you've done, press `Ctrl+S` and restart Excel.
 
 # FAQ
 
@@ -76,6 +80,9 @@ Yes, if your theme uses colors different from white for window and black for tex
 
 ### Does it work with a high contrast themes
 No.
+
+### Can I disable pop-up dialog when I press "Fix All" button?
+Yes, there's an option for this, see "Configuration" section.
 
 ### Can you make a dark theme for Excel?
 No. There's too much things to track. It's almost (if not entirely) impossible.
