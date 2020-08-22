@@ -79,13 +79,20 @@ After you've done, press `Ctrl+S` and restart Excel.
 Yes, if your theme uses colors different from white for window and black for text.
 
 ### Does it work with a high contrast themes
+
 No.
 
 ### Can I disable pop-up dialog when I press "Fix All" button?
+
 Yes, there's an option for this, see "Configuration" section.
 
-### Can you make a dark theme for Excel?
+### Can you make a theme for Excel or other parts of the MS Office?
+
 No. There's too much things to track. It's almost (if not entirely) impossible.
+
+### I have a problem or found a bug.
+
+Please, fill out an issue on this repository. I'll try to answer ASAP.
 
 ### How can I help?
 
