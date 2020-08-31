@@ -43,7 +43,13 @@ If you can test it with Office versions other than 2019, please, fill out an iss
 
 # Installation
 
+Basically, you just need to install an Add-In. You can either stick to the instructions below or google a better guide.
+
 1. Download `ExcelDarkThemeFix.xlam` and `whitebg.png` files.
+1. "Unblock" Add-In:
+   1. Move the cursor over `ExcelDarkThemeFix.xlam`, click right mouse button and click "Properties".
+   1. At the bottom of the window find "Unblock" checkbox and check it. Then click "OK".
+   1. If you don't have this option, please, proceed to the rest of the steps.
 1. Navigate to `%AppData%\Microsoft\AddIns` and put the downloaded files here.
 1. Enable macros:
    1. Open Excel.
@@ -56,6 +62,29 @@ If you can test it with Office versions other than 2019, please, fill out an iss
    1. Click on "Excel Add-Ins".
    1. Check the "ExcelDarkThemeFix" box.
    1. Click "Ok" and restart Excel.
+1. If Add-In doesn't work:
+   1. If you have an antivirus:
+      1. Add `ExcelDarkThemeFix.xlam` to the exceptions. Some antiviruses might prevent Add-Ins from running. Don't worry, this Add-In won't make you computer explode :p Check the sources if you're unsure.
+      1. Restart Excel and see if Add-In now works. If yes, you don't need to complete the steps below.
+   1. Navigate to "Options".
+   1. On the left side of the window click "Trust Center".
+   1. Click "Trust Center Settings..."
+   1. Now you've got three options:
+      1. Unblock from PowerShell (try this first):
+         1. Open PowerShell.
+         1. Type `Unblock-File -Path "AppData\Roaming\Microsoft\AddIns\ExcelDarkThemeFix.xlam"` and hit Enter.
+         1. Close PowerShell.
+      1. Trust only installed Add-Ins (recommended):
+         1. On the left side of the window click "Trusted new locations".
+         1. Click "Add Location".
+         1. Click "Browse..."
+         1. Navigate to "%AppData%\Microsoft\AddIns" and click "OK".
+         1. Click "OK" in all opened windows.
+      1. Trust EVERY Add-In you open:
+         1. On the left side of the window click "File Block Settings".
+         1. Find "Excel 2007 and later Add-In files" row and uncheck both of the checkboxes. Well, you may uncheck all the rows to make your life easier.
+         1. Click "OK" in all opened windows.
+   1. Restart Excel.
 
 # Usage
 
