@@ -119,6 +119,10 @@ Yes, if your theme uses colors different from white for window and black for tex
 
 No.
 
+### Some of my workbooks still have wrong cells' fill!
+
+There's an unsafe option to fix it, see "Configuration" section.
+
 ### Can I disable pop-up dialog when I press "Fix All" button?
 
 Yes, there's an option for this, see "Configuration" section.
