@@ -22,6 +22,7 @@ This Add-In aims to fix this issue by setting colors to normal.
 
 1. Charts' font colors - there's an option to set it to black.
 1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
+1. Mixed cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an to tweak it.
 
 Enabling these options is described under the "Configuration" section.
 
@@ -105,7 +106,7 @@ This Add-In provides some cool but unsafe options that you can enable. In order 
 
 ![Open "ExcelDarkThemeFixModule"](https://user-images.githubusercontent.com/34414488/90905218-8ad6de80-e3d8-11ea-8369-9ebb11ffafca.png)
 
-You'll see some code. Don't freak you, just follow the instructions in it. Read everything **carefully**!
+You'll see some code. Don't freak out, just follow the instructions in it. Read everything **carefully**!
 
 When you're done, press `Ctrl+S` and restart Excel.
 
@@ -113,23 +114,20 @@ When you're done, press `Ctrl+S` and restart Excel.
 
 ### Do I need it if I use light theme?
 
-Yes, if your theme uses colors different from white for window and black for text.
+**Yes**, if your theme uses colors different from white for window and black for text. It is recommended to **always use this Add-In with custom themes** since one usually doesn't checks the colors.
 
 ### Does it work with high contrast themes?
 
 No.
-
-### Some of my workbooks still have wrong cells' fill!
-
-There's an unsafe option to fix it, see "Configuration" section.
+*Note: this question is **NOT** about high contrast **looking** themes (they're working fine) but about an actual Windows' feature.*
 
 ### Can I disable pop-up dialog when I press "Fix All" button?
 
-Yes, there's an option for this, see "Configuration" section.
+Yes, there's an option for it, see "Configuration" section.
 
-### Can you make a theme for Excel or other parts of the MS Office?
+### Can you make a theme for Excel or other MS Office applications?
 
-No. There are too much things to track. It's almost (if not entirely) impossible.
+No. *It's almost (if not entirely) impossible because there's no way of tracking which cell should use which colors. Same goes for every MS Office application.*
 
 ### I have a problem or found a bug. Where can I report it?
 
