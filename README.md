@@ -22,7 +22,7 @@ This Add-In aims to fix this issue by setting colors to normal.
 
 1. Charts' font colors - there's an option to set it to black.
 1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
-1. Mixed cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an to tweak it.
+1. Different cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an option to tweak it.
 
 Enabling these options is described under the "Configuration" section.
 
@@ -31,7 +31,7 @@ Enabling these options is described under the "Configuration" section.
 1. SmartArt - as far as I've tried, unfixable.
 1. Automatic color replacement - will make things undoable and heavily slow down Excel (if not make it unusable).
 1. Table styles - hard to fix and default styles don't need it.
-1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so scipt just will replace it.
+1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so Add-In just will replace it.
 1. You name it, I'm not an Excel expert :D
 
 If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
@@ -50,14 +50,14 @@ Basically, you just need to install an Add-In. You can either stick to the instr
 1. "Unblock" Add-In:
    1. Move the cursor over `ExcelDarkThemeFix.xlam`, click right mouse button and click "Properties".
    1. At the bottom of the window find "Unblock" checkbox and check it. Then click "OK".
-   1. If you don't have this option, please, proceed to the rest of the steps.
+   1. If you don't have this checkbox, please, proceed to the rest of the steps.
 1. Navigate to `%AppData%\Microsoft\AddIns` and put the downloaded files here.
 1. Enable macros:
    1. Open Excel.
    1. Navigate to "Options".
    1. On the left side of the window click "Customize Ribbon".
    1. On the right side of the window check "Developer" and "Add-Ins" boxes.
-   1. Click "Ok" and restart Excel.
+   1. Click "OK" and restart Excel.
 1. Enable this Add-In:
    1. Open "Developer" tab.
    1. Click on "Excel Add-Ins".
@@ -66,32 +66,32 @@ Basically, you just need to install an Add-In. You can either stick to the instr
 1. If Add-In doesn't work:
    1. If you have an antivirus:
       1. Add `ExcelDarkThemeFix.xlam` to the exceptions. Some antiviruses might prevent Add-Ins from running. Don't worry, this Add-In won't make you computer explode :p Check the sources if you're unsure.
-      1. Restart Excel and see if Add-In now works. If yes, you don't need to complete the steps below.
+      1. Restart Excel and see if Add-In now works. If yes, you've installed Add-In, don't follow the steps below.
    1. Navigate to "Options".
    1. On the left side of the window click "Trust Center".
    1. Click "Trust Center Settings..."
-   1. Now you've got three options:
-      1. Unblock from PowerShell (try this first):
+   1. Now you've got three options, try one after another:
+      1. Unblock from PowerShell:
          1. Open PowerShell.
          1. Type `Unblock-File -Path "AppData\Roaming\Microsoft\AddIns\ExcelDarkThemeFix.xlam"` and hit Enter.
          1. Close PowerShell.
-      1. Trust only installed Add-Ins (recommended):
-         1. On the left side of the window click "Trusted new locations".
+      1. Trust only installed Add-Ins:
+         1. On the left side of the Trust Center window click "Trusted Locations".
          1. Click "Add Location".
          1. Click "Browse..."
-         1. Navigate to "%AppData%\Microsoft\AddIns" and click "OK".
-         1. Click "OK" in all opened windows.
+         1. Navigate to `%AppData%\Microsoft\AddIns` and click "OK".
+         1. Click "OK" in all opened Excel windows.
       1. Trust EVERY Add-In you open:
-         1. On the left side of the window click "File Block Settings".
+         1. On the left side of the Trust Center window click "File Block Settings".
          1. Find "Excel 2007 and later Add-In files" row and uncheck both of the checkboxes. Well, you may uncheck all the rows to make your life easier.
-         1. Click "OK" in all opened windows.
+         1. Click "OK" in all opened Excel windows.
    1. Restart Excel.
 
 # Usage
 
-Script does everything automatically. However, if you've set automatic colors to something and don't want to fix it yourself, in Excel:
+Add-In does everything automatically. However, if you've set automatic colors to something and don't want to fix it yourself, in Excel:
 
-1. Open "Add-Ins" tab (if you didn't have it, it will be added automatically).
+1. Open "Add-Ins" tab (if you didn't have it, it has been added automatically).
 1. Click "Fix all open workbooks".
 1. Read text in pop-up dialog. It says that if you click "Yes", you won't be able to undo the changes you've made. The only way to undo something is to close all workbooks without saving and open them again.
 1. Click "Yes" if you will not need to undo anything.
@@ -131,12 +131,12 @@ No. *It's almost (if not entirely) impossible because there's no way of tracking
 
 ### I have a problem or found a bug. Where can I report it?
 
-Please, fill out an issue on this repository. Please, provide as much information as possible.
+Please, fill out an issue on this repository and provide as much information as possible.
 
 ### How can I help?
 
-If you're regular user, you can test this Add-In with different kinds of workbooks and report found issues. You could also install an older version of Microsoft Office and check if this Add-In is compatible with it.
+If you're regular user, you can test this Add-In with different kinds of workbooks and report found issues. You could also install an older version of Microsoft Office and check if this Add-In is working with it.
 
 You can also spread the word about this Add-In (especially in non-English speaking parts of the Internet), so other people could have a less of a headache.
 
-If you're developer, you can add some useful features or fix things described above. Start by thoroughly reading the code to understand what it does. Then do the coding. When you're done, create a pull request with your code. If it's not hard, please, provide the code in plain text instead of .xlam file even if you've changed entire script.
+If you're developer, you can add some useful features or fix things described above. Start by thoroughly reading the code to understand what it does. Then do the coding. When you're done, create a pull request with your code. If it's not hard, please, provide the code in plain text instead of .xlam file even if you've changed entire Add-In.
