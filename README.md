@@ -13,7 +13,7 @@ This Add-In aims to fix this issue by setting colors to normal.
 
 1. Sheets
 1. Cells
-1. Shapes
+1. Graphic shapes
 1. Charts - except slightly different font colors
 1. Styles
 1. Fixing multiple files in one click
@@ -23,6 +23,7 @@ This Add-In aims to fix this issue by setting colors to normal.
 1. Charts' font colors - there's an option to set it to black.
 1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
 1. Different cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an option to tweak it.
+1. OLE Excel objects - need to manually open it, save and close.
 
 Enabling these options is described under the "Configuration" section.
 
@@ -33,6 +34,12 @@ Enabling these options is described under the "Configuration" section.
 1. Table styles - hard to fix and default styles don't need it.
 1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so Add-In just will replace it.
 1. You name it, I'm not an Excel expert :D
+
+# Currently working on
+1. Testing different `Shape.Type`s.
+1. Testing protected cells and shapes.
+1. Testing forms.
+1. Way to change table styles.
 
 If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
 
@@ -139,4 +146,4 @@ If you're regular user, you can test this Add-In with different kinds of workboo
 
 You can also spread the word about this Add-In (especially in non-English speaking parts of the Internet), so other people could have a less of a headache.
 
-If you're developer, you can add some useful features or fix things described above. Start by thoroughly reading the code to understand what it does. Then do the coding. When you're done, create a pull request with your code. If it's not hard, please, provide the code in plain text instead of .xlam file even if you've changed entire Add-In.
+If you're developer, you can add some useful features or fix things described above. Start by setting `DebugLevel` option and thoroughly reading the code to understand what it does. Then do the coding. When you're done, create a pull request with your code. If it's not hard, please, provide the code in plain text instead of .xlam file even if you've changed entire Add-In.
