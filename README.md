@@ -36,7 +36,7 @@ Enabling these options is described under the "Configuration" section.
 1. You name it, I'm not an Excel expert :D
 
 # Currently working on
-1. Testing different `Shape.Type`s.
+1. Supporting different `Shape.Type`s.
 1. Testing protected cells and shapes.
 1. Testing forms.
 1. Way to change table styles.
@@ -53,12 +53,29 @@ If you can test it with Office versions other than 2019, please, fill out an iss
 
 Basically, you just need to install an Add-In. You can either stick to the instructions below or google a better guide.
 
-1. Download `ExcelDarkThemeFix.xlam` and `whitebg.png` files.
+## Easy way
+
+**Warning:** this method uses XLSTART folder which appears to be working fine, but it's not an exactly correct way to install Add-Ins.
+
+1. Download `ExcelDarkThemeFix.xlam` file and `ExcelDarkThemeFixBG` folder.
+1. Navigate to `%AppData%\Microsoft\Excel\XLSTART` and put both `ExcelDarkThemeFix.xlam` and `ExcelDarkThemeFixBG` here. *Do NOT move anything from `ExcelDarkThemeFixBG` and don't rename it!*
+1. Open Excel and engjoy.
+
+If this method didn't work for you, please, create an issue and try method below.
+
+## Hard way
+
+This is more correct way to install an Add-In, but it's hard to follow.
+
+<details>
+  <summary>Click to expand</summary>
+   
+1. Download `ExcelDarkThemeFix.xlam` file and `ExcelDarkThemeFixBG` folder.
 1. "Unblock" Add-In:
    1. Move the cursor over `ExcelDarkThemeFix.xlam`, click right mouse button and click "Properties".
    1. At the bottom of the window find "Unblock" checkbox and check it. Then click "OK".
    1. If you don't have this checkbox, please, proceed to the rest of the steps.
-1. Navigate to `%AppData%\Microsoft\AddIns` and put the downloaded files here.
+1. Navigate to `%AppData%\Microsoft\AddIns` and put both `ExcelDarkThemeFix.xlam` and `ExcelDarkThemeFixBG` here. *Do NOT move anything from `ExcelDarkThemeFixBG` and don't rename it!*
 1. Enable macros:
    1. Open Excel.
    1. Navigate to "Options".
@@ -93,6 +110,8 @@ Basically, you just need to install an Add-In. You can either stick to the instr
          1. Find "Excel 2007 and later Add-In files" row and uncheck both of the checkboxes. Well, you may uncheck all the rows to make your life easier.
          1. Click "OK" in all opened Excel windows.
    1. Restart Excel.
+   
+</details>
 
 # Usage
 
