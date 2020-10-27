@@ -33,11 +33,11 @@ Enabling these options is described under the "Configuration" section.
 1. Automatic color replacement - will make things undoable and heavily slow down Excel (if not make it unusable).
 1. Table styles - hard to fix and default styles don't need it.
 1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so Add-In just will replace it.
+1. Protected sheets - need to manually unprotect it, click "Fix all" button and, if needed, protect it again.
 1. You name it, I'm not an Excel expert :D
 
 # Currently working on
 1. Supporting different `Shape.Type`s.
-1. Testing protected cells and shapes.
 1. Testing forms.
 1. Way to change table styles.
 
