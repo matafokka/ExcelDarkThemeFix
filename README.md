@@ -59,7 +59,7 @@ Basically, you just need to install an Add-In. You can either stick to the instr
 
 1. Download `ExcelDarkThemeFix.xlam` file and `ExcelDarkThemeFixBG` folder.
 1. Navigate to `%AppData%\Microsoft\Excel\XLSTART` and put both `ExcelDarkThemeFix.xlam` and `ExcelDarkThemeFixBG` here. *Do NOT move anything from `ExcelDarkThemeFixBG` and don't rename it!*
-1. Open Excel and engjoy.
+1. Open Excel and enjoy the Add-In.
 
 If this method didn't work for you, please, create an issue and try method below.
 
