@@ -38,16 +38,17 @@ Enabling these options is described under the "Configuration" section.
 
 # Currently working on
 1. Supporting different `Shape.Type`s.
-1. Testing forms.
 1. Way to change table styles.
 
 If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
 
 # Compatibility list
 
-Fully compatible with Microsoft Office 2019. Should work in Office 2016 and 360.
+Fully compatible with Microsoft Office 2016 and 2019.
 
-If you can test it with Office versions other than 2019, please, fill out an issue and I'll update this list.
+[Reportedly](https://github.com/matafokka/ExcelDarkThemeFix/issues/4#issuecomment-747018702), doesn't fully work in 365 and requires installation using "hard way" instructions.
+
+If you can test it with Office versions other than listed above, please, fill out an issue and I'll update this list.
 
 # Installation
 
@@ -112,6 +113,8 @@ This is more correct way to install an Add-In, but it's hard to follow.
    1. Restart Excel.
    
 </details>
+
+**Edge case:** If you've just installed MS Office and haven't rebooted, install ExcelDarkThemeFix and reboot your PC.
 
 # Usage
 
