@@ -31,16 +31,13 @@ Enabling these options is described under the "Configuration" section.
 
 1. SmartArt - as far as I've tried, unfixable.
 1. Automatic color replacement - will make things undoable and heavily slow down Excel (if not make it unusable).
-1. Table styles - hard to fix and default styles don't need it.
+1. Table styles - impossible to fix built-in styles. Cells with custom styles are being fixed automatically without any issues.
 1. Altering backgrounds - using background is a part of the fix. There's no way of detecting whether the sheet has a background, so Add-In just will replace it.
 1. Protected sheets - need to manually unprotect it, click "Fix all" button and, if needed, protect it again.
+1. Possibly, some of `Shape.Type`s.
 1. You name it, I'm not an Excel expert :D
 
-# Currently working on
-1. Supporting different `Shape.Type`s.
-1. Way to change table styles.
-
-If you know how to fix any of these things, please, let me know. I will greatly appreciate your effort!
+If you know how to fix any of these things, please, fill out an issue and describe a solution. I will greatly appreciate your effort!
 
 # Compatibility list
 
