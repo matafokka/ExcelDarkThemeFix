@@ -9,6 +9,8 @@ This happens because Excel picks system colors *(instead of using predefined one
 
 This Add-In aims to fix this issue by setting colors to normal.
 
+If you find this Add-In useful, you also might want to get [PowerPointDarkThemeFix](https://github.com/matafokka/PowerPointDarkThemeFix).
+
 # What is fixed?
 
 1. Sheets
@@ -161,7 +163,7 @@ Please, fill out an issue on this repository and provide as much information as 
 
 ### How can I help?
 
-If you're regular user, you can test this Add-In with different kinds of workbooks and report found issues. You could also install an older version of Microsoft Office and check if this Add-In is working with it.
+If you're regular user, you can test this Add-In with different kinds of workbooks and report found issues, or install an older version of Microsoft Office and check if this Add-In works with it.
 
 You can also spread the word about this Add-In (especially in non-English speaking parts of the Internet), so other people could have a less of a headache.
 
