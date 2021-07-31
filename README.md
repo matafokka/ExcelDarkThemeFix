@@ -9,6 +9,8 @@ This happens because Excel picks system colors *(instead of using predefined one
 
 This Add-In aims to fix this issue by setting colors to normal.
 
+Check out [project's DeviantArt page](https://www.deviantart.com/matafokka/art/ExcelDarkThemeFix-887401706) for general discussion.
+
 If you find this Add-In useful, you also might want to get [PowerPointDarkThemeFix](https://github.com/matafokka/PowerPointDarkThemeFix).
 
 # What is fixed?
