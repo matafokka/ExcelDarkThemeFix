@@ -45,9 +45,7 @@ If you know how to fix any of these things, please, fill out an issue and descri
 
 # Compatibility list
 
-Fully compatible with Microsoft Office 2016 and 2019.
-
-Partially compatible with Office 2021 (as of build 14228.20204). Dummies from Microsoft swapped light text theme colors with dark colors which resulted in Excel itself being incompatible with files created in some (not all) earlier versions. They might fix this behavior later. Since it's Excel bug, this Add-In won't attempt to fix it because it'll introduce even more inconsistent behavior.
+Fully compatible with Microsoft Office 2016, 2019 and 2021 (starting from build 14430.20306).
 
 [Reportedly](https://github.com/matafokka/ExcelDarkThemeFix/issues/4#issuecomment-747018702), doesn't fully work in 365 and requires installation using "hard way" instructions.
 
