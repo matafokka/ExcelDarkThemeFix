@@ -29,7 +29,7 @@ If you find this Add-In useful, you also might want to get [PowerPointDarkThemeF
 1. Different cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an option to tweak it.
 1. OLE Excel objects - need to manually open it, save and close.
 
-Enabling these options is described under the "Configuration" section.
+Enabling these options is described under the [Configuration](#configuration) section.
 
 # What is not fixed?
 
@@ -47,7 +47,7 @@ If you know how to fix any of these things, please, fill out an issue and descri
 
 Fully compatible with Microsoft Office 2016, 2019 and 2021 (starting from build 14430.20306).
 
-[Reportedly](https://github.com/matafokka/ExcelDarkThemeFix/issues/4#issuecomment-747018702), doesn't fully work in 365 and requires installation using "hard way" instructions.
+[Reportedly](https://github.com/matafokka/ExcelDarkThemeFix/issues/4#issuecomment-747018702), doesn't fully work in 365, requires installation using "hard way" instructions and [has to be put in a localized "AddIns" folder](https://github.com/matafokka/ExcelDarkThemeFix/issues/8).
 
 If you can test it with Office versions other than listed above, please, fill out an issue and I'll update this list.
 
@@ -105,7 +105,7 @@ This is more correct way to install an Add-In, but it's hard to follow.
          1. On the left side of the Trust Center window click "Trusted Locations".
          1. Click "Add Location".
          1. Click "Browse..."
-         1. Navigate to `%AppData%\Microsoft\AddIns` and click "OK".
+         1. Navigate to `%AppData%\Microsoft\AddIns` ([find a localized "AddIns" folder for non-English Office 365 verison](https://github.com/matafokka/ExcelDarkThemeFix/issues/8)) and click "OK".
          1. Click "OK" in all opened Excel windows.
       1. Trust EVERY Add-In you open:
          1. On the left side of the Trust Center window click "File Block Settings".
