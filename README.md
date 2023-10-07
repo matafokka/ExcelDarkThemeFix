@@ -1,23 +1,3 @@
-# Not a viable fix
-
-After two years since the initial release, I'm sad to announce that ExcelDarkThemeFix is not a viable fix because of following problems that has been found just recently:
-
-1. Files with a large number of cells take a long time to open, see [this issue](https://github.com/matafokka/ExcelDarkThemeFix/issues/10).
-
-**Explanation:** we need to change every individual cell in a used range which is very slow operation. We can't change range as a whole because individual cells have their own styles.
-
-2. Colors may still be wrong, depends on a theme and Excel version.
-
-**Explanation:** for some reason Excel decides to change colors to an arbitrary index when system color is different from black. Not all colors are affected, depends on a theme. Not sure why and how, but here it is.
-
-I don't believe that these problems can ever be fixed. Only some kind of patch will completely fix Excel, but I can't implement one.
-
-If you know how to fix listed problems, please, please let me know by creating an issue.
-
-### However, ExcelDarkThemeFix is still alive!
-
-I'll still fix any other issues that might be found. Just be aware of the info above, [this](#what-has-workaround) and [this](#what-is-not-fixed).
-
 # ExcelDarkThemeFix
 Fixes Microsoft Excel appearance when custom Windows theme is used.
 
@@ -48,11 +28,13 @@ If you find this Add-In useful, you also might want to get [PowerPointDarkThemeF
 1. Cell's dark background when editing - there's an option to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
 1. Different cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an option to tweak it.
 1. OLE Excel objects - need to manually open it, save and close.
+1. [ODS files taking a long time to load or even throwing an error](https://github.com/matafokka/ExcelDarkThemeFix/issues/10) - convert it to XLSX.
 
 Enabling these options is described under the [Configuration](#configuration) section.
 
 # What is not fixed?
 
+1. Colors may still be wrong - some Excel  version will change colors to an arbitrary indexed colors depending on a theme. Not all colors and themes are affected.
 1. SmartArt - as far as I've tried, unfixable.
 1. Automatic color replacement - will make things undoable and heavily slow down Excel (if not make it unusable).
 1. Table styles - impossible to fix built-in styles. Cells with custom styles are being fixed automatically without any issues.
@@ -169,7 +151,14 @@ When you're done, press `Ctrl+S` and restart Excel.
 ### Does it work with high contrast themes?
 
 No.
-*Note: this question is **NOT** about high contrast **looking** themes (they're working fine) but about an actual Windows' feature.*
+
+*Note: this question is **NOT** about high contrast **looking** themes (they're working fine) but about an actual Windows feature.*
+
+### Does it slow down Excel?
+
+Yes, startup will be a bit slower. The more cells you have the bigger the impact.
+
+*Note: we can't optimize this by changing the whole used range because we need to modify each individual parameter of each individual cell.*
 
 ### Can I disable pop-up dialog when I press "Fix All" button?
 
