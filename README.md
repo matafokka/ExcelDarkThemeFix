@@ -2,13 +2,13 @@
 
 After two years since the initial release, I'm sad to announce that ExcelDarkThemeFix is not a viable fix because of following problems that has been found just recently:
 
-1. Files with a large number of cells take a long time to open.
+1. Files with a large number of cells take a long time to open, see [this issue](https://github.com/matafokka/ExcelDarkThemeFix/issues/10).
 
 **Explanation:** we need to change every individual cell in a used range which is very slow operation. We can't change range as a whole because individual cells have their own styles.
 
 2. Colors may still be wrong, depends on a theme and Excel version.
 
-**Explanation:** for some reason Excel deicdes to change colors to an arbitrary index when system color is different from black. Not all colors are affected, depends on a theme. Not sure why and how, but here it is.
+**Explanation:** for some reason Excel decides to change colors to an arbitrary index when system color is different from black. Not all colors are affected, depends on a theme. Not sure why and how, but here it is.
 
 I don't believe that these problems can ever be fixed. Only some kind of patch will completely fix Excel, but I can't implement one.
 
