@@ -28,7 +28,6 @@ If you find this Add-In useful, you also might want to get [PowerPointDarkThemeF
 1. Cell's dark background when editing - there's an [option](#configuration) to fix it, but you won't be able to undo anything. As an alternative, use the formula thingy right above the sheet to see what you type.
 1. Different cells' fill outside of used range - fill can be either preserved (including an actual automatic color, default behavior) or removed completely. There's an [option](#configuration) to tweak it.
 1. OLE Excel objects - you need to manually open it, save and close.
-1. [ODS files taking a long time to load or even throwing an error](https://github.com/matafokka/ExcelDarkThemeFix/issues/10) - convert it to XLSX. ExcelDarkThemeFix will ask you whether you want to fix ODS file when you'll open it. This behavior is [configurable](#configuration).
 
 Enabling configurable options is described under the [Configuration](#configuration) section.
 
