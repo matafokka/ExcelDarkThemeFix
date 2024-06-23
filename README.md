@@ -122,10 +122,13 @@ This is more correct way to install an Add-In, but it's hard to follow.
 
 Add-In does everything automatically. However, if you've set automatic colors to something and don't want to fix it yourself, in Excel:
 
-1. Open "Add-Ins" tab (if you didn't have it, it has been added automatically).
-1. Click "Fix all open workbooks".
+1. Open "Home" tab.
+1. Locate "Dark theme" section.
+1. Click "Fix all" button.
 1. Read text in pop-up dialog. It says that if you click "Yes", you won't be able to undo the changes you've made. The only way to undo something is to close all workbooks without saving and open them again.
 1. Click "Yes" if you will not need to undo anything.
+
+**Note** "Fix all" button position is [configurable](#configuration) via `FixAllButtonInHomeTab` option.
 
 # Configuration
 
